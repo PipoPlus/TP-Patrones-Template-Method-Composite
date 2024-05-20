@@ -14,7 +14,7 @@ public class Main {
 
         System.out.println("Costo del Paquete de Seguros: $" + paquete.calcularCosto());
 
-        // Crear un segundo paquete que incluye el primer paquete y un seguro adicional
+
         SeguroParticular seguroMedico = new SeguroParticular(400);
         PaqueteSeguros superPaquete = new PaqueteSeguros();
         superPaquete.agregarSeguro(paquete);

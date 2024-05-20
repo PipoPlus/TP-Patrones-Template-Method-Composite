@@ -35,13 +35,13 @@ class SalariosTest {
 
 
     @Test
-    void calcularSalariosTotales(){
+    void testCalcularSalariosTotales(){
 
         assertEquals(600.0, director1.calcularSalarios());
     }
 
     @Test
-    void calcularSalarioEmpleado(){
+    void testCalcularSalarioEmpleado(){
         assertEquals(100.0,empleado1.calcularSalarios());
     }
 

@@ -3,18 +3,29 @@ package ejercicio4;
 import static java.time.LocalDate.now;
 import static java.time.Month.of;
 
-public class CalculadorNoJubilado implements Calculador {
-    private LogTransaction log;
-    private int mesEnPromocion;
-    public double calcularPrecio(double precioProducto) {
-        double precioTotal = precioProducto;
-        if (of(mesEnPromocion).equals(now().getMonth())) {
-            precioTotal += precioProducto * 0.15;
-        } else {
-            precioTotal += precioProducto * 0.21;
-        }
-        log.log(CalculadorNoJubilado.class.getName());
-        return precioTotal;
+public class CalculadorNoJubilado extends CalculadorTemplate {
+    private static final double DESCUENTO_NORMAL = 0.21;
+    private static final double DESCUENTO_PROMOCION = 0.15;
+
+
+    public CalculadorNoJubilado(LogTransaction log, int mesEnPromocion){
+        super(log,mesEnPromocion);
+    }
+
+
+    @Override
+    public boolean aplicaDescuento() {
+        return of(mesEnPromocion).equals(now().getMonth());
+    }
+
+    @Override
+    public double getDescuentoNormal() {
+        return DESCUENTO_NORMAL;
+    }
+
+    @Override
+    public double getDescuentoPromocion() {
+        return DESCUENTO_PROMOCION;
     }
 }
 

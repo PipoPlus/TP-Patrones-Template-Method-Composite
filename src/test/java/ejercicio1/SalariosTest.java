@@ -36,13 +36,14 @@ class SalariosTest {
 
     @Test
     void testCalcularSalariosTotales(){
-
+        double salarioEsperado = 100.0;
         assertEquals(600.0, director1.calcularSalarios());
     }
 
     @Test
     void testCalcularSalarioEmpleado(){
-        assertEquals(100.0,empleado1.calcularSalarios());
+        double salarioEsperado = 100.0;
+        assertEquals(salarioEsperado,empleado1.calcularSalarios());
     }
 
 }

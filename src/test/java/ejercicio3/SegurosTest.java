@@ -36,12 +36,14 @@ class SegurosTest {
 
     @Test
     void testCostoPaquete() {
-        assertEquals(510, paquete.calcularCosto());
+        int precioEsperado = 510;
+        assertEquals(precioEsperado, paquete.calcularCosto());
     }
 
     @Test
     void testCostoSuperPaquete() {
-        assertEquals(819, superPaquete.calcularCosto());
+        int precioEsperado = 819;
+        assertEquals(precioEsperado, superPaquete.calcularCosto());
     }
 
 

@@ -38,11 +38,13 @@ public class ScrumTest {
 
     @Test
     public void testCalcularTiempoProyectoConHistorias() {
-        assertEquals(15, proyecto.calcularTiempo());
+        int horaEseperada = 15;
+        assertEquals(horaEseperada, proyecto.calcularTiempo());
     }
 
     @Test
     public void testCalcularTiempoHistoriaUsuario() {
-        assertEquals(7, historia1.calcularTiempo());
+        int horaEsperada = 15;
+        assertEquals(horaEsperada, historia1.calcularTiempo());
     }
 }
